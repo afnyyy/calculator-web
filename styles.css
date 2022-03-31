@@ -1,0 +1,134 @@
+html {
+    box-sizing: border-box;
+ }
+ 
+ * {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+ }
+ 
+ body {
+    background: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(
+       to right,
+       #4d5c63,
+       #203a43,
+       #2c5364
+    ); */
+ }
+ 
+ .calculator {
+    background: #fff;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.50);
+ }
+ 
+ .calculator-display {
+    background: #f1f1f1;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 10px 10px 0 0;
+ }
+ 
+ .calculator-display h1 {
+    padding: 20px;
+    font-size: 40px;
+    font-family: "Lucida Console", sans-serif;
+    font-weight: 100;
+    overflow-x: auto;
+ }
+ 
+ /* Custom scrollbar */
+ /* width */
+ ::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+ }
+ 
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+ }
+ 
+ /* Buttons */
+ .calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+ }
+ 
+ button {
+    cursor: pointer;
+    display: inline-block;
+    min-height: 50px;
+    font-size: 18px;
+    font-weight: 100;
+    border: none;
+    border-radius: 5px;
+    background: rgb(199, 199, 199);
+ }
+ 
+ button:hover {
+    filter: brightness(110%);
+ }
+ 
+ button:active {
+    transform: translateY(1px);
+ }
+ 
+ button:focus {
+    outline: none;
+ }
+ 
+ .operator {
+    background: grey;
+    color: white;
+    font-size: 30px;
+ }
+ .Percentage {
+    background: grey;
+    color: white;
+    font-size: 30px;
+ }
+ 
+ .clear {
+    background: rgb(255, 101, 40);
+    color: white;
+ }
+ 
+ .clear:hover {
+    filter: brightness(90%);
+ }
+ 
+ .equal-sign {
+    grid-column: -2;
+    grid-row: 3 / span 1;
+    background: rgb(13, 206, 206);
+ }
+ 
+ /* Media Query: Large Smartphone (Vertical) */
+ @media screen and (max-width: 576px) {
+    .calculator {
+       width: 90%;
+       margin: 0 auto;
+    }
+ }
